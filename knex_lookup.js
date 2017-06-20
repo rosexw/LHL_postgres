@@ -1,5 +1,4 @@
 const settings = require("./settings"); // settings.json
-
 const knex = require("knex")({
     client: 'pg',
     connection: settings,
@@ -17,12 +16,12 @@ const lookupName = (name) => {
     .orWhere('last_name', name)
     .asCallback(function(err, rows) {
       if (err) return console.error(err);
+      console.log(`Searching...`);
       output(rows);
     });
 }
 
 const output = (rows) => {
-  console.log(`Searching...`);
   console.log(`Found ${rows.length} person(s) by the name of ${input}.`);
   for (let row of rows) {
     let date = row.birthdate;
