@@ -4,11 +4,6 @@
   "description": "",
   "main": "test_script.js",
   "scripts": {
-    { "install" : "scripts/install.js"
-    , "postinstall" : "scripts/install.js"
-    , "uninstall" : "scripts/uninstall.js"
-    }
-    "test_script": "./test_script.js"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +17,7 @@
   },
   "homepage": "https://github.com/rosexw/postgres#readme",
   "dependencies": {
+    "knex": "^0.13.0",
     "ps": "0.0.2"
   }
 }
