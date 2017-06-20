@@ -15,11 +15,9 @@ const lookupName = (name) => {
     .from('famous_people')
     .where('first_name', name)
     .orWhere('last_name', name)
-    .then((rows) => {
+    .asCallback(function(err, rows) {
+      if (err) return console.error(err);
       output(rows);
-    })
-    .then(() => {
-      knex.destroy();
     });
 }
 
@@ -34,3 +32,4 @@ const output = (rows) => {
 }
 
 lookupName(input);
+knex.destroy();
