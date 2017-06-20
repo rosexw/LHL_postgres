@@ -14,7 +14,8 @@ client.connect((err) => {
   if (err) {
     return console.error("Connection Error", err);
   }
-  client.query("SELECT $1::int AS number", ["1"], (err, result) => {
+  client.query("SELECT $1::int + $2::int AS number, $2::int as number2", ["1789686", "1231"],  (err, result) => { 
+//  client.query("SELECT $1::int AS number", ["1"], (err, result) => {
     if (err) {
       return console.error("error running query", err);
     }
