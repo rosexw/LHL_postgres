@@ -35,7 +35,7 @@ const output = (rows) => {
   console.log(`Found ${rows.length} person(s) by the name of ${name}.`);
   for (let row of rows) {
     let date = row.birthdate;
-    let dformat = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate();
+    let dformat = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
     console.log(`- ${row.id}: ${row.first_name} ${row.last_name}, born '${dformat}'`);
   }
 }
