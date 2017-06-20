@@ -1,0 +1,22 @@
+{
+  "name": "postgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosexw/postgres.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rosexw/postgres/issues"
+  },
+  "homepage": "https://github.com/rosexw/postgres#readme",
+  "dependencies": {
+    "ps": "0.0.2"
+  }
+}
